@@ -7,6 +7,7 @@ import Home from "./Home";
 import GroupChat from "./GroupChat";
 import OneonOneChat from "./OneonOneChat";
 import UserList from "./UserList";
+import { Firebase } from "./Secrets/Firebase";
 
 const AppNavigator = createStackNavigator(
   {
@@ -29,13 +30,14 @@ const AppNavigator = createStackNavigator(
 const App = createAppContainer(AppNavigator);
 
 var firebaseConfig = {
-  apiKey: "AIzaSyB6Ni9XsY2XloxkOk3XQcDJTYnE1XIorpA",
-    authDomain: "atgtask2.firebaseapp.com",
-    databaseURL: "https://atgtask2.firebaseio.com",
-    projectId: "atgtask2",
-    storageBucket: "atgtask2.appspot.com",
-    messagingSenderId: "900168537257",
-    appId: "1:900168537257:web:d6e90097dd90d9d73305b8"
+  apiKey: Firebase.apiKey,
+  authDomain: Firebase.authDomain,
+  databaseURL: Firebase.databaseURL,
+  projectId: Firebase.projectId,
+  storageBucket: Firebase.storageBucket,
+  messagingSenderId: Firebase.messagingSenderId,
+  appId: Firebase.appId,
+  measurementId: Firebase.measurementId,
 };
 
 if (!firebase.apps.length) {
