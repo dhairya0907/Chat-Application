@@ -37,7 +37,7 @@ export class Login extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.titleText}>YOUR ACCOUNT FOR</Text>
-        <Text style={styles.titleText1}>Chat</Text>
+        <Text style={styles.titleText1}>Chat Application</Text>
         <Text></Text>
         <Text></Text>
         <TextInput
