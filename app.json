@@ -3,14 +3,18 @@
     "name": "Chat Application",
     "slug": "Chat-Application",
     "privacy": "unlisted",
+    "description": "Simple Chat Application build using React Native and Firebase.",
+    "version": "1.0.0",
+    "owner" : "dhairya",
+    "orientation": "portrait",
+    "sdkVersion" : "42.0.1",
+    "githubUrl": "https://github.com/dhairya0907/Chat-Application",
+    
+    "icon": "./assets/icon.png",
     "platforms": [
       "ios",
       "android"
     ],
-    "version": "1.0.0",
-    "owner" : "dhairya",
-     "orientation": "portrait",
-    "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
