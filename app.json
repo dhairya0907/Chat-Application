@@ -5,8 +5,7 @@
     "privacy": "unlisted",
     "platforms": [
       "ios",
-      "android",
-      "web"
+      "android"
     ],
     "version": "1.0.0",
     "orientation": "portrait",
@@ -32,9 +31,6 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.dhairya0907.chatappliction"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
     }
   }
 }

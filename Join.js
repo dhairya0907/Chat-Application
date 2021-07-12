@@ -22,9 +22,9 @@ export class Join extends Component {
     //function to make simple alert
     alert("Account Created");
   };
-  _simpleAlertHandler1 = () => {
+  _simpleAlertHandler1 = (error) => {
     //function to make simple alert
-    alert("There is some Problem");
+    alert(error);
   };
   onLogin() {
     const { email, fname } = this.state;
@@ -66,10 +66,10 @@ export class Join extends Component {
           this.props.navigation.navigate("Login");
         })
         .catch(error => {
-          this._simpleAlertHandler1();
+          this._simpleAlertHandler1(error);
         });
     } else {
-      this._simpleAlertHandler1();
+      this._simpleAlertHandler1("There was some problem.");
     }
   }
 

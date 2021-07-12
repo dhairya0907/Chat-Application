@@ -16,9 +16,9 @@ export class Login extends Component {
     password: ""
   };
 
-  _simpleAlertHandler1 = () => {
+  _simpleAlertHandler1 = (error) => {
     //function to make simple alert
-    alert("There is some Problem");
+    alert(error);
   };
   onLogin() {
     const { email, password } = this.state;
@@ -29,7 +29,7 @@ export class Login extends Component {
         this.props.navigation.navigate("Home");
       })
       .catch(error => {
-        this._simpleAlertHandler1();
+        this._simpleAlertHandler1(error);
       });
   }
 
