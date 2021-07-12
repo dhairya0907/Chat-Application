@@ -7,7 +7,7 @@
     "version": "1.0.0",
     "owner" : "dhairya",
     "orientation": "portrait",
-    "sdkVersion" : "42.0.1",
+    "sdkVersion" : "42.0.0",
     "githubUrl": "https://github.com/dhairya0907/Chat-Application",
     
     "icon": "./assets/icon.png",
