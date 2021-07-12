@@ -12,8 +12,8 @@ import firebase from "firebase";
 
 export class Login extends Component {
   state = {
-    email: "test@gmail.com",
-    password: "123456"
+    email: "",
+    password: "",
   };
 
   _simpleAlertHandler1 = (error) => {

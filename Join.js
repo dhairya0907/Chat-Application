@@ -15,7 +15,8 @@ var group = 0;
 export class Join extends Component {
   state = {
     email: "",
-    fname: ""
+    fname: "",
+    password : "",
   };
 
   _simpleAlertHandler = () => {
@@ -69,7 +70,7 @@ export class Join extends Component {
           this._simpleAlertHandler1(error);
         });
     } else {
-      this._simpleAlertHandler1("There was some problem.");
+      this._simpleAlertHandler1("Nick Name already exits.");
     }
   }
 
