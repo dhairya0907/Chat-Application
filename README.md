@@ -4,7 +4,7 @@
 		<img src="/Images/logo.png" alt="Logo" width="120" height="100">
 	</a>
 	<h3 align="center">Chat Application</h3>
-	<p align="center">Simple Chat Appliction build using React Native and Firebase.
+	<p align="center">Simple Chat Application build using React Native and Firebase.
 	 <br />	<!-- <a href="https://hackernewsapi-demo.vercel.app/">View Screenshots</a>
 		· --><a href="https://github.com/dhairya0907/Chat-Application/issues">Report Bug</a>
 		· <a href="https://github.com/dhairya0907/Chat-Application/issues">Request Feature</a>
