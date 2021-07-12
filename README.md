@@ -1,12 +1,12 @@
 <!-- PROJECT LOGO -->
 <p align="center">
-	<a href="https://github.com/dhairya0907/Chat-Application">
+	<a href="https://expo.io/@dhairya/Chat-Application">
 		<img src="/Images/logo.png" alt="Logo" width="120" height="100">
 	</a>
 	<h3 align="center">Chat Application</h3>
 	<p align="center">Simple Chat Application build using React Native and Firebase.
-	 <br />	<!-- <a href="https://hackernewsapi-demo.vercel.app/">View Screenshots</a>
-		· --><a href="https://github.com/dhairya0907/Chat-Application/issues">Report Bug</a>
+	 <br /><a href="https://expo.io/@dhairya/Chat-Application">Expo Project Page</a>
+		·<a href="https://github.com/dhairya0907/Chat-Application/issues">Report Bug</a>
 		· <a href="https://github.com/dhairya0907/Chat-Application/issues">Request Feature</a>
 	</p>
 </p>
@@ -61,6 +61,7 @@ Here's why I use React Native and Firebase :
 ### Built With
 * [React Native](https://reactnative.dev/)
 * [Firebase](https://firebase.google.com/)
+* [Expo](https://expo.io/)
 
 <!-- * [Screenshots website deployed using Vercel](https://vercel.com/) -->
 
@@ -132,4 +133,4 @@ Dhairya Sharma - [@dhairya_0907](https://twitter.com/dhairya_0907) - dhairya.sha
 
 Project Github Link: [https://github.com/dhairya0907/Chat-Application](https://github.com/dhairya0907/Chat-Application)
 
-<!-- Project Web Appliction Link: [https://github.com/dhairya0907/Chat-Application](https://github.com/dhairya0907/Chat-Application) -->
+Project Expo Page Link: [https://expo.io/@dhairya/Chat-Application](https://expo.io/@dhairya/Chat-Application) 
