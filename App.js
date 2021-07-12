@@ -7,7 +7,7 @@ import Home from "./Home";
 import GroupChat from "./GroupChat";
 import OneonOneChat from "./OneonOneChat";
 import UserList from "./UserList";
-import { Firebase } from "./Secrets/Firebase";
+//import { Firebase } from "./Secrets/Firebase";
 
 const AppNavigator = createStackNavigator(
   {
@@ -30,14 +30,14 @@ const AppNavigator = createStackNavigator(
 const App = createAppContainer(AppNavigator);
 
 var firebaseConfig = {
-  apiKey: Firebase.apiKey,
-  authDomain: Firebase.authDomain,
-  databaseURL: Firebase.databaseURL,
-  projectId: Firebase.projectId,
-  storageBucket: Firebase.storageBucket,
-  messagingSenderId: Firebase.messagingSenderId,
-  appId: Firebase.appId,
-  measurementId: Firebase.measurementId,
+  apiKey: secrets.Firebase_apiKey,
+  authDomain: secrets.Firebase_authDomain,
+  databaseURL: secrets.Firebase_databaseURL,
+  projectId: secrets.Firebase_projectId,
+  storageBucket: secrets.Firebase_storageBucket,
+  messagingSenderId: secrets.Firebase_messagingSenderId,
+  appId: secrets.Firebase_appId,
+  measurementId: secrets.Firebase_measurementId,
 };
 
 if (!firebase.apps.length) {
