@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Chat Application",
-    "slug": "Chat Application",
+    "slug": "Chat-Application",
     "privacy": "unlisted",
     "platforms": [
       "ios",
