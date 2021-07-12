@@ -1,87 +1,73 @@
 <!-- PROJECT LOGO -->
-
 <p align="center">
-  <a href="https://hackernewsapi-demo.vercel.app/">
-    <img src="/Images/logo.png" alt="Logo" width="80" height="80">
-  </a>
-
-  <h3 align="center">Hacker News API</h3>
-
-  <p align="center">
-    Api usage and Design demonstration using Hacker News Api and React.
-    <br />
-    <br />
-    <a href="https://hackernewsapi-demo.vercel.app/">View Demo</a>
-    ·
-    <a href="https://github.com/dhairya0907/Hacker-News-API/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/dhairya0907/Hacker-News-API/issues">Request Feature</a>
-  </p>
+	<a href="https://github.com/dhairya0907/Chat-Application">
+		<img src="/Images/logo.png" alt="Logo" width="120" height="100">
+	</a>
+	<h3 align="center">Chat Application</h3>
+	<p align="center">Simple Chat Appliction build using React Native and Firebase.
+	 <br />	<!-- <a href="https://hackernewsapi-demo.vercel.app/">View Screenshots</a>
+		· --><a href="https://github.com/dhairya0907/Chat-Application/issues">Report Bug</a>
+		· <a href="https://github.com/dhairya0907/Chat-Application/issues">Request Feature</a>
+	</p>
 </p>
 
 <!-- PROJECT SHIELDS -->
 <div align="center">
-   <a target="_blank" href="https://github.com/dhairya0907/Hacker-News-API/blob/main/LICENSE"><img src="https://badgen.net/badge/license/MIT/blue"></a>
-  <a target="_blank" href=https://github.com/dhairya0907/Hacker-News-API/actions><img src="https://github.com/dhairya0907/Hacker-News-API/workflows/Build%20&%20Test/badge.svg"></a>
-  <a target="_blank" href=https://github.com/dhairya0907/Hacker-News-API/actions><img src="https://github.com/dhairya0907/Hacker-News-API/workflows/CodeQL/badge.svg"></a>
-   <a target="_blank" href="https://www.linkedin.com/in/dhairyasharma0907/"><img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social"></a>&nbsp;
-    <a target="_blank" href="https://twitter.com/dhairya_0907"><img src="https://img.shields.io/twitter/follow/dhairya_0907?label=Follow&style=social"></a>
+	<a target="_blank" href="https://github.com/dhairya0907/Chat-Application/blob/main/LICENSE">
+		<img src="https://badgen.net/badge/license/MIT/blue">
+	</a>
+	<a target="_blank" href="https://www.linkedin.com/in/dhairyasharma0907/">
+		<img src="https://img.shields.io/badge/style--5eba00.svg?label=LinkedIn&logo=linkedin&style=social">
+	</a>&nbsp;
+	<a target="_blank" href="https://twitter.com/dhairya_0907">
+		<img src="https://img.shields.io/twitter/follow/dhairya_0907?label=Follow&style=social">
+	</a>
 </div>
-
-
-
 
 <!-- ABOUT THE PROJECT -->
 <p>
-  <br/>
-  <br/>
+	<br/>
+	<br/>
 </p>
-
 
 ## About The Project
-
-<p align="center" >
-   <a href="https://hackernewsapi-demo.vercel.app/">
-    <img alt="product mobile screenshot" src="/Images/Mobile_Screen_GIf.gif" />
- </a>
-<p  align="center">
-  Mobile Version
-  <br/>
- 
+<!-- 
+<p align="center">
+	<a href="https://hackernewsapi-demo.vercel.app/">
+		<img alt="product IOS screenshot" src="/Images/Mobile_Screen_GIf.gif" />
+	</a>
+	<p align="center">IOS Version
+		<br/>
+	</p>
 </p>
-
+<p align="center">
+	<a href="https://hackernewsapi-demo.vercel.app/">
+		<img alt="product Android screenshot" src="/Images/Desktop_Screen_GIf.gif" />
+	</a>
 </p>
-<p align="center" >
-   <a href="https://hackernewsapi-demo.vercel.app/">
-    <img alt="product desktop screenshot" src="/Images/Desktop_Screen_GIf.gif"/>
-    </a>
-
+<p align="center">Android Version
+	<br/>
+	<br/>
 </p>
-<p  align="center">
-  Desktop Version
-  <br/>
- <br/>
-</p>
+-->
+In this project I have build simple chat application using React Native and Firebase. Using this application you can chat with any user one on one or you can chat to all the user in group. User list is also updated, from recent to oldest message.
 
- 
-
-This project is demonstration of how to use API in React project and how to Design simple website using React. I have used Haker News free api fot this demonstration, You can use any other API in same way.
-
-Here's why I use Hacker News API and React :
-* I used Hacker News API because it's free to use and it updates in real time.
-* I used React Library to develop and Design web application beacuse it is easy to learn and easy to use.
-* React has geat developer tools.
-* A virtual DOM is used.
+Here's why I use React Native and Firebase :
+* I used React Native because because it allow to build both Android and IOS application from single codebase.
+* Expo provieds over-the-air update.
+* Firebase give easy to implemente user authentication.
+* Real time database by Firebase is best option to update chats in real time.
 
 ### Built With
-* [React](https://reactjs.org/)
-* [Hacker News API](https://github.com/HackerNews/API)
-* [Deployed using Vercel](https://vercel.com/)
+* [React Native](https://reactnative.dev/)
+* [Firebase](https://firebase.google.com/)
+
+<!-- * [Screenshots website deployed using Vercel](https://vercel.com/) -->
 
 ### What I learned
-* How to use API in React.
-* How to Design React web application.
-* How Sturcture React web appliction source code.
+* How to update chats in real time.
+* How to authenticate user and have unique username.
+* How to develop both IOS and Android appliction at once.
 
 
 
@@ -100,31 +86,42 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-1. Get a free API Key at [https://github.com/HackerNews/API](https://github.com/HackerNews/API)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/dhairya0907/Hacker-News-API.git
-   ```
+1. Create account on [Firebase](https://firebase.google.com/)
+2. Create account on [Expo](https://expo.io/)
 3. Install YARN packages
+   ```sh
+   npm install --global expo-cli
+   ```
+4. Clone the repo
+   ```sh
+   git clone https://github.com/dhairya0907/Chat-Application.git
+   ```
+5. Install YARN packages
    ```sh
    yarn install
    ```
-4. Run on localhost
+6. Run
    ```sh
-   yarn start
+   expo start
    ```
+7. Scan barcode from your mobile to run on Expo Go.
+
+8. To Build Standalone Apps Run
+    ```sh
+    expo build:android or expo build:ios
+    ```
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/dhairya0907/Hacker-News-API/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/dhairya0907/Chat-Application/issues) for a list of proposed features (and known issues).
 
 
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See [`LICENSE`](https://github.com/dhairya0907/Hacker-News-API/blob/main/LICENSE) for more information.
+Distributed under the MIT License. See [`LICENSE`](https://github.com/dhairya0907/Chat-Application/blob/main/LICENSE) for more information.
 
 
 
@@ -133,6 +130,6 @@ Distributed under the MIT License. See [`LICENSE`](https://github.com/dhairya090
 
 Dhairya Sharma - [@dhairya_0907](https://twitter.com/dhairya_0907) - dhairya.sharma532@gmail.com.com
 
-Project Github Link: [https://github.com/dhairya0907/Hacker-News-API](https://github.com/dhairya0907/Hacker-News-API)
+Project Github Link: [https://github.com/dhairya0907/Chat-Application](https://github.com/dhairya0907/Chat-Application)
 
-Project Web Appliction Link: [https://hackernewsapi-demo.vercel.app/](https://hackernewsapi-demo.vercel.app/)
+<!-- Project Web Appliction Link: [https://github.com/dhairya0907/Chat-Application](https://github.com/dhairya0907/Chat-Application) -->
