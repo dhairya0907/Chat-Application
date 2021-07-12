@@ -83,30 +83,30 @@ This is an example of how to list things you need to use the software and how to
   ```sh
   npm install --global yarn
   ```
+* expo
+  ```sh
+  npm install --global expo-cli
+  ```
+* Create account on [Firebase](https://firebase.google.com/)
+* Create account on [Expo](https://expo.io/)
 
 ### Installation
 
-1. Create account on [Firebase](https://firebase.google.com/)
-2. Create account on [Expo](https://expo.io/)
-3. Install Expo
-   ```sh
-   npm install --global expo-cli
-   ```
-4. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/dhairya0907/Chat-Application.git
    ```
-5. Install YARN packages
+2. Install YARN packages
    ```sh
    yarn install
    ```
-6. Run
+3. Run
    ```sh
    expo start
    ```
-7. Scan barcode from your mobile to run on Expo Go.
+4. Scan barcode from your mobile to run on Expo Go.
 
-8. To Build Standalone Apps Run
+5. To Build Standalone Apps Run
     ```sh
     expo build:android or expo build:ios
     ```
