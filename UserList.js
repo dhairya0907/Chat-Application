@@ -37,8 +37,8 @@ export default class UserList extends Component {
         this.list();
       });
   }
-  async list() {
-    await firebase
+  list() {
+   firebase
       .database()
       .ref("total")
       .once("value", (snapshot) => {
@@ -50,11 +50,10 @@ export default class UserList extends Component {
               this.state.fname.push({
                 fname: item.key,
               });
+              this.setState(this.state);
             });
           });
-          this.state.fname.reverse();
           this.or();
-          this.setState(this.state);
         } else {
           this.extra();
           this.setState(this.state);
@@ -203,7 +202,7 @@ export default class UserList extends Component {
           </Text>
         </View>
         <Card style={{ height: windowHeight - 50 }}>
-          {this.state.fname.map((item) => {
+          {this.state.fname.slice(0).reverse().map((item) => {
             return (
               <View style={{ top: 10 }} key = {item.fname}>
                 <TouchableOpacity
@@ -244,7 +243,7 @@ export default class UserList extends Component {
             );
           })}
 
-          {this.state.allname.map((item) => {
+          {this.state.allname.slice(0).reverse().map((item) => {
             return (
               <View style={{ top: 10 }} key = {item.fname}>
                 <TouchableOpacity
@@ -285,7 +284,7 @@ export default class UserList extends Component {
             );
           })}
 
-          {this.state.exname.map((item) => {
+          {this.state.exname.slice(0).reverse().map((item) => {
             return (
               <View style={{ top: 10 }} key = {item.fname}>
                 <TouchableOpacity
