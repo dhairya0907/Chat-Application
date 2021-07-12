@@ -29,9 +29,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF",
-        "package": "com.dhairya0907.chatappliction"
-      }
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "com.dhairya0907.chatappliction"
     },
     "web": {
       "favicon": "./assets/favicon.png"
