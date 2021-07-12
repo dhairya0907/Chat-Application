@@ -30,7 +30,7 @@ class GroupChat extends React.Component<Props> {
   get user() {
     return {
       _id: GroupChatSupport.shared.uid,
-      avatar: "https://placeimg.com/140/140/any"
+      avatar: "https://picsum.photos/140/140"
     };
   }
 

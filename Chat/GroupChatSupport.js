@@ -1,5 +1,5 @@
 import firebase from "firebase";
-import { alltext } from "./UserList";
+import { alltext } from "../Screens/UserList";
 
 var tmsg = 0;
 var score = 0;

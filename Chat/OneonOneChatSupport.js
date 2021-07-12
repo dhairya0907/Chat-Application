@@ -1,5 +1,5 @@
 import firebase from "firebase";
-import { alltext } from "./UserList";
+import { alltext } from "../Screens/UserList";
 
 var chatwith;
 var tmsg;

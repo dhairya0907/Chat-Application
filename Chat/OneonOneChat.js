@@ -4,7 +4,7 @@ import { GiftedChat } from "react-native-gifted-chat";
 import { View, TouchableOpacity, Image, Text, Platform } from "react-native";
 import OneonOneChatSupport from "./OneonOneChatSupport";
 import KeyboardSpacer from "react-native-keyboard-spacer";
-import { alltext } from "./UserList";
+import { alltext } from "../Screens/UserList";
 
 type Props = {
   name?: string
@@ -23,7 +23,7 @@ class OneonOneChat extends React.Component<Props> {
   get user() {
     return {
       _id: OneonOneChatSupport.shared.uid,
-      avatar: "https://placeimg.com/140/140/any"
+      avatar: "https://picsum.photos/140/140"
     };
   }
 

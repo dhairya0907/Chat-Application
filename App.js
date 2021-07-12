@@ -1,12 +1,12 @@
 import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 import firebase from "firebase";
-import Login from "./Login";
-import Join from "./Join";
-import Home from "./Home";
-import GroupChat from "./GroupChat";
-import OneonOneChat from "./OneonOneChat";
-import UserList from "./UserList";
+import Login from "./Screens/Login";
+import Join from "./Screens/Join";
+import Home from "./Screens/Home";
+import GroupChat from "./Chat/GroupChat";
+import OneonOneChat from "./Chat/OneonOneChat";
+import UserList from "./Screens/UserList";
 import { Firebase } from "./Secrets/Firebase";
 
 const AppNavigator = createStackNavigator(
