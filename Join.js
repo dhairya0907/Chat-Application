@@ -77,7 +77,7 @@ export class Join extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.titleText}>YOUR ACCOUNT FOR</Text>
-        <Text style={styles.titleText1}>ATG TASK 2</Text>
+        <Text style={styles.titleText1}>Chat</Text>
         <Text></Text>
         <Text></Text>
         <TextInput

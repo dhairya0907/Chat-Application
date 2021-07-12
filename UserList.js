@@ -5,7 +5,7 @@ import {
   StyleSheet,
   TouchableOpacity,
   Image,
-  Dimensions
+  Dimensions,
 } from "react-native";
 import { Card } from "react-native-paper";
 import firebase from "firebase";
@@ -24,7 +24,7 @@ export default class UserList extends Component {
       exname: [],
       or: [],
       unfname: [],
-      isDataLoaded: false
+      isDataLoaded: false,
     };
   }
   componentDidMount() {
@@ -32,7 +32,7 @@ export default class UserList extends Component {
     firebase
       .database()
       .ref("users/" + currentUser + "/fname")
-      .on("value", snapshot => {
+      .on("value", (snapshot) => {
         name = snapshot.val();
         this.list();
       });
@@ -41,14 +41,14 @@ export default class UserList extends Component {
     firebase
       .database()
       .ref("total")
-      .once("value", snapshot => {
+      .once("value", (snapshot) => {
         if (snapshot.child(name).exists()) {
           const ref = firebase.database().ref("total/" + name);
-          ref.orderByValue().on("value", snapshot => {
+          ref.orderByValue().on("value", (snapshot) => {
             this.state.fname = [];
-            snapshot.forEach(item => {
+            snapshot.forEach((item) => {
               this.state.fname.push({
-                fname: item.key
+                fname: item.key,
               });
               this.state.fname.reverse();
               this.or();
@@ -63,11 +63,11 @@ export default class UserList extends Component {
   }
   or() {
     const reff = firebase.database().ref("users");
-    reff.orderByChild("fname").on("value", snapshot => {
+    reff.orderByChild("fname").on("value", (snapshot) => {
       this.state.or = [];
-      snapshot.forEach(item => {
+      snapshot.forEach((item) => {
         this.state.or.push({
-          fname: item.val().fname
+          fname: item.val().fname,
         });
       });
     });
@@ -78,15 +78,15 @@ export default class UserList extends Component {
     firebase
       .database()
       .ref("total")
-      .once("value", snapshot => {
+      .once("value", (snapshot) => {
         this.state.allname = [];
-        this.state.or.map(item => {
+        this.state.or.map((item) => {
           if (
             snapshot.child(name + "/" + item.fname).exists() == false &&
             name != item.fname
           ) {
             this.state.allname.push({
-              fname: item.fname
+              fname: item.fname,
             });
             this.setState(this.state);
           }
@@ -95,19 +95,19 @@ export default class UserList extends Component {
   }
   extra() {
     const reff = firebase.database().ref("users");
-    reff.orderByChild("fname").once("value", snapshot => {
+    reff.orderByChild("fname").once("value", (snapshot) => {
       this.state.exname = [];
-      snapshot.forEach(item => {
+      snapshot.forEach((item) => {
         if (name != item.val().fname) {
           this.state.exname.push({
-            fname: item.val().fname
+            fname: item.val().fname,
           });
           this.setState(this.state);
         }
       });
     });
   }
-  onPress = text => {
+  onPress = (text) => {
     if (text == "group") {
       this.props.navigation.navigate("GroupChat");
     } else {
@@ -116,7 +116,7 @@ export default class UserList extends Component {
       firebase
         .database()
         .ref("users/")
-        .on("child_added", snapshot => {
+        .on("child_added", (snapshot) => {
           if (text == snapshot.val().fname) {
             key = snapshot.key;
             this.setState(this.state);
@@ -125,7 +125,7 @@ export default class UserList extends Component {
       firebase
         .database()
         .ref("users/" + currentUser)
-        .on("value", snapshot => {
+        .on("value", (snapshot) => {
           if (snapshot.child("chat/" + text).exists()) {
             flag++;
           }
@@ -135,36 +135,45 @@ export default class UserList extends Component {
           .database()
           .ref("users/" + currentUser + "/chat/" + text)
           .set({
-            shared_id: name + text
+            shared_id: name + text,
           });
         firebase
           .database()
           .ref("users/" + key + "/chat/" + name)
           .set({
-            shared_id: name + text
+            shared_id: name + text,
           });
       }
       firebase
         .database()
         .ref("users")
-        .once("value", snapshot => {
+        .once("value", (snapshot) => {
           if (snapshot.child("undefined").exists()) {
             firebase
               .database()
               .ref("users/" + key + "/chat/" + name)
               .set({
-                shared_id: name + text
+                shared_id: name + text,
               });
-            firebase
-              .database()
-              .ref("users/undefined")
-              .remove();
+            firebase.database().ref("users/undefined").remove();
           }
         });
       alltext = text;
       this.props.navigation.navigate("OneonOneChat");
     }
   };
+
+  titleCase(str) {
+    var splitStr = str.toLowerCase().split(" ");
+    for (var i = 0; i < splitStr.length; i++) {
+      // You do not need to check if i is larger than splitStr length, as your for does that for you
+      // Assign it back to the array
+      splitStr[i] =
+        splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);
+    }
+    // Directly return the joined string
+    return splitStr.join(" ");
+  }
 
   render() {
     return (
@@ -174,7 +183,7 @@ export default class UserList extends Component {
             flexDirection: "row",
             textAlign: "left",
             fontSize: 15,
-            backgroundColor: "#fff"
+            backgroundColor: "#fff",
           }}
         >
           <TouchableOpacity
@@ -182,8 +191,7 @@ export default class UserList extends Component {
           >
             <Image
               source={{
-                uri:
-                  "https://cdn3.iconfinder.com/data/icons/mobile-friendly-ui/100/back_arrow-512.png"
+                uri: "https://cdn3.iconfinder.com/data/icons/mobile-friendly-ui/100/back_arrow-512.png",
               }}
               style={{ width: 50, height: 50 }}
             />
@@ -195,36 +203,128 @@ export default class UserList extends Component {
           </Text>
         </View>
         <Card style={{ height: windowHeight - 50 }}>
-          <Text style={{ fontSize: 20 }}>
-            {this.state.fname.map(item => {
-              return (
-                <Text onPress={() => this.onPress(item.fname)}>
-                  {" "}
-                  {"\n" + item.fname + "\n\n"}{" "}
-                </Text>
-              );
-            })}
-          </Text>
-          <Text style={{ fontSize: 20 }}>
-            {this.state.allname.map(item => {
-              return (
-                <Text onPress={() => this.onPress(item.fname)}>
-                  {" "}
-                  {"\n" + item.fname + "\n\n"}{" "}
-                </Text>
-              );
-            })}
-          </Text>
-          <Text style={{ fontSize: 20 }}>
-            {this.state.exname.map(item => {
-              return (
-                <Text onPress={() => this.onPress(item.fname)}>
-                  {" "}
-                  {"\n" + item.fname + "\n\n"}{" "}
-                </Text>
-              );
-            })}
-          </Text>
+          {this.state.fname.map((item) => {
+            return (
+              <View style={{ top: 10 }}>
+                <TouchableOpacity
+                  style={{
+                    width: "100%",
+                    height: 85,
+                    borderBottomWidth: 1,
+                    flexDirection: "row",
+                  }}
+                  onPress={() => this.onPress(item.fname)}
+                >
+                  <Image
+                    source={{
+                      uri: "https://picsum.photos/140/140",
+                    }}
+                    style={{
+                      width: 70,
+                      height: 70,
+                      borderRadius: 360,
+                      left: 10,
+                      top: 10,
+                    }}
+                  />
+                  <Text
+                    style={{
+                      fontSize: 20,
+                      fontWeight: "500",
+                      left: 20,
+                      alignSelf: "center",
+                    }}
+                  >
+                    {this.titleCase(
+                      item.fname == "group" ? "group chat" : item.fname
+                    )}
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            );
+          })}
+
+          {this.state.allname.map((item) => {
+            return (
+              <View style={{ top: 10 }}>
+                <TouchableOpacity
+                  style={{
+                    width: "100%",
+                    height: 85,
+                    borderBottomWidth: 1,
+                    flexDirection: "row",
+                  }}
+                  onPress={() => this.onPress(item.fname)}
+                >
+                  <Image
+                    source={{
+                      uri: "https://picsum.photos/140/140",
+                    }}
+                    style={{
+                      width: 70,
+                      height: 70,
+                      borderRadius: 360,
+                      left: 10,
+                      top: 10,
+                    }}
+                  />
+                  <Text
+                    style={{
+                      fontSize: 20,
+                      fontWeight: "500",
+                      left: 20,
+                      alignSelf: "center",
+                    }}
+                  >
+                    {this.titleCase(
+                      item.fname == "group" ? "group chat" : item.fname
+                    )}
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            );
+          })}
+
+          {this.state.exname.map((item) => {
+            return (
+              <View style={{ top: 10 }}>
+                <TouchableOpacity
+                  style={{
+                    width: "100%",
+                    height: 85,
+                    borderBottomWidth: 1,
+                    flexDirection: "row",
+                  }}
+                  onPress={() => this.onPress(item.fname)}
+                >
+                  <Image
+                    source={{
+                      uri: "https://picsum.photos/140/140",
+                    }}
+                    style={{
+                      width: 70,
+                      height: 70,
+                      borderRadius: 360,
+                      left: 10,
+                      top: 10,
+                    }}
+                  />
+                  <Text
+                    style={{
+                      fontSize: 20,
+                      fontWeight: "500",
+                      left: 20,
+                      alignSelf: "center",
+                    }}
+                  >
+                    {this.titleCase(
+                      item.fname == "group" ? "group chat" : item.fname
+                    )}
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            );
+          })}
         </Card>
       </View>
     );
@@ -235,6 +335,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
-    backgroundColor: "#ecf0f1"
-  }
+    backgroundColor: "#ecf0f1",
+  },
 });

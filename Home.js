@@ -6,7 +6,7 @@ export class Home extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.titleText}>Welcome To</Text>
-        <Text style={styles.titleText2}>ATG Chat</Text>
+        <Text style={styles.titleText2}>Chat</Text>
         <TouchableOpacity
           style={styles.button}
           onPress={() => this.props.navigation.navigate("UserList")}

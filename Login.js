@@ -12,8 +12,8 @@ import firebase from "firebase";
 
 export class Login extends Component {
   state = {
-    email: "",
-    password: ""
+    email: "test@gmail.com",
+    password: "123456"
   };
 
   _simpleAlertHandler1 = (error) => {
@@ -37,7 +37,7 @@ export class Login extends Component {
     return (
       <View style={styles.container}>
         <Text style={styles.titleText}>YOUR ACCOUNT FOR</Text>
-        <Text style={styles.titleText1}>ATG TASK 2</Text>
+        <Text style={styles.titleText1}>Chat</Text>
         <Text></Text>
         <Text></Text>
         <TextInput
