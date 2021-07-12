@@ -88,7 +88,7 @@ This is an example of how to list things you need to use the software and how to
 
 1. Create account on [Firebase](https://firebase.google.com/)
 2. Create account on [Expo](https://expo.io/)
-3. Install YARN packages
+3. Install Expo
    ```sh
    npm install --global expo-cli
    ```
