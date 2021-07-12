@@ -203,9 +203,9 @@ export default class UserList extends Component {
           </Text>
         </View>
         <Card style={{ height: windowHeight - 50 }}>
-          {this.state.fname.map((item, key) => {
+          {this.state.fname.map((item) => {
             return (
-              <View style={{ top: 10 }}>
+              <View style={{ top: 10 }} key = {item.fname}>
                 <TouchableOpacity
                   style={{
                     width: "100%",
@@ -244,9 +244,9 @@ export default class UserList extends Component {
             );
           })}
 
-          {this.state.allname.map((item, key) => {
+          {this.state.allname.map((item) => {
             return (
-              <View style={{ top: 10 }}>
+              <View style={{ top: 10 }} key = {item.fname}>
                 <TouchableOpacity
                   style={{
                     width: "100%",
@@ -285,9 +285,9 @@ export default class UserList extends Component {
             );
           })}
 
-          {this.state.exname.map((item, key) => {
+          {this.state.exname.map((item) => {
             return (
-              <View style={{ top: 10 }}>
+              <View style={{ top: 10 }} key = {item.fname}>
                 <TouchableOpacity
                   style={{
                     width: "100%",
