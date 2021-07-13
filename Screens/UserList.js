@@ -11,6 +11,8 @@ import { Card } from "react-native-paper";
 import firebase from "firebase";
 
 const windowHeight = Dimensions.get("window").height;
+const windowWidth = Dimensions.get("window").width;
+
 var name = "";
 var alltext = "";
 var flag = 0;
@@ -183,10 +185,13 @@ export default class UserList extends Component {
             textAlign: "left",
             fontSize: 15,
             backgroundColor: "#fff",
+            height: 100,
+            width: windowWidth,
           }}
         >
           <TouchableOpacity
             onPress={() => this.props.navigation.navigate("Home")}
+            style={{ top : 50 }}
           >
             <Image
               source={{
@@ -196,7 +201,7 @@ export default class UserList extends Component {
             />
           </TouchableOpacity>
           <Text
-            style={{ fontSize: 20, fontWeight: "bold", left: 120, top: 10 }}
+            style={{ fontSize: 20, fontWeight: "bold", left: windowWidth/3.8, top: 60 }}
           >
             User List
           </Text>
