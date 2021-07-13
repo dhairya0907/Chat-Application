@@ -11,6 +11,7 @@
     "expo": "~42.0.1",
     "expo-status-bar": "~1.0.4",
     "firebase": "^8.7.1",
+    "node-fetch": "^2.6.1",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
@@ -20,7 +21,8 @@
     "react-native-paper": "^4.9.2",
     "react-native-web": "~0.13.12",
     "react-navigation": "^4.4.4",
-    "react-navigation-stack": "^2.10.4"
+    "react-navigation-stack": "^2.10.4",
+    "ws": "7.4.6"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"
