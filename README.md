@@ -31,31 +31,22 @@
 </p>
 
 ## About The Project
-<!-- 
+
 <p align="center">
-	<a href="https://hackernewsapi-demo.vercel.app/">
-		<img alt="product IOS screenshot" src="/Images/Mobile_Screen_GIf.gif" />
+	<a href="https://expo.io/@dhairya/Chat-Application">
+		<img alt="Chat Application Demo" src="/Images/chat-application-demo.gif" />
 	</a>
-	<p align="center">IOS Version
+	<p align="center">Chat Application Demo
 		<br/>
 	</p>
 </p>
-<p align="center">
-	<a href="https://hackernewsapi-demo.vercel.app/">
-		<img alt="product Android screenshot" src="/Images/Desktop_Screen_GIf.gif" />
-	</a>
-</p>
-<p align="center">Android Version
-	<br/>
-	<br/>
-</p>
--->
+
 In this project I have build simple chat application using React Native and Firebase. Using this application you can chat with any user one on one or you can chat to all the user in group. User list is also updated, from recent to oldest message.
 
 Here's why I use React Native and Firebase :
 * I used React Native because because it allow to build both Android and IOS application from single codebase.
-* Expo provieds over-the-air update.
-* Firebase give easy to implemente user authentication.
+* Expo provides over-the-air update.
+* Firebase give easy to implement user authentication.
 * Real time database by Firebase is best option to update chats in real time.
 
 ### Built With
@@ -68,14 +59,14 @@ Here's why I use React Native and Firebase :
 ### What I learned
 * How to update chats in real time.
 * How to authenticate user and have unique username.
-* How to develop both IOS and Android appliction at once.
+* How to develop both IOS and Android application at once.
 
 
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To host web applictaion on user localhost follow below steps :
+To host web application on user localhost follow below steps :
 
 ### Prerequisites
 
