@@ -58,7 +58,7 @@ class OneonOneChat extends React.Component<Props> {
           onSend={OneonOneChatSupport.shared.send}
           user={this.user}
         />
-        {Platform.OS === "android" ? <KeyboardSpacer topSpacing={25} /> : null}
+         {/*Platform.OS === "android" ? <KeyboardSpacer topSpacing={25} /> : null*/}
       </View>
     );
   }
