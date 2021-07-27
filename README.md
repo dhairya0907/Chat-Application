@@ -66,7 +66,7 @@ Here's why I use React Native and Firebase :
 <!-- GETTING STARTED -->
 ## Getting Started
 
-To host web application on user localhost follow below steps :
+To start working on application follow below steps :
 
 ### Prerequisites
 
